@@ -29,19 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = intval($_POST['id']);
     $id_usuario_ficha = intval($_POST['id_usuario_ficha']);
 
-
-    //$vantagens = somatória dos pontos de vantagens atribuidos baseado na classe escolhida (não sei como vou fazer ainda)
-    //$desvantagens = a mesma coisa em cima
-
-
-
-    /*if ($vantagens == 10 && $desvantagens == 10){
-        $sql = "INSERT INTO fichapersonagem (nome, objeto, historia, classe, vida, vitalidade, maldicao, astucia, presteza, auge, crueldade, obstinacao, violacao, id) VALUES ('$nome', '$historia', '$classe', '$objeto', '$vida', '$vitalidade', '$maldicao', '$astucia', '$presteza', '$auge', '$crueldade', '$obstinacao', '$violacao', '$id', '$id_usuario_ficha')";
-    }else{
-        echo "Não adianta tentar passar a perna, corrija seus pontos de Vantagens e Desvantagens!!";
-    }*/
-
-
+    
+     $sql = "INSERT INTO fichapersonagem (nome, objeto, historia, classe, vida, vitalidade, maldicao, astucia, presteza, auge, crueldade, obstinacao, violacao, id) VALUES ('$nome', '$historia', '$classe', '$objeto', '$vida', '$vitalidade', '$maldicao', '$astucia', '$presteza', '$auge', '$crueldade', '$obstinacao', '$violacao', '$id', '$id_usuario_ficha')";
 
     if ($conn->query($sql) === TRUE) {
         header('Location: ficha.php');
